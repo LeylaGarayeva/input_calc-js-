@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<input type="text">
+    <input type="text">
+    <p id="calc"></p>
+    <script type="text/javascript">
+    	var input=document.getElementsByTagName('input');
+   input[0].addEventListener("blur",calc1);
+   input[1].addEventListener("blur",calc1);
+ var result1=0;
+   function calc1()
+   {
+     var first_val=input[0].value;
+     var second_val=input[1].value;
+     var result=parseInt(first_val) * parseInt(second_val);
+     if (result)
+     {
+       document.getElementById("calc").innerHTML=result;
+     }
+   }
+   calc1();
+    </script>
+</body>
+</html>
